@@ -627,6 +627,16 @@ namespace VPLBrokerTestHarness
             btnAccept.Enabled = !string.IsNullOrWhiteSpace(txtAltID.Text);
         }
 
+        private void txtAPIKey_TextChanged(object sender, EventArgs e)
+        {
+            cboControllingDomain.Enabled = (!string.IsNullOrWhiteSpace(txtAPIKey.Text) && !string.IsNullOrWhiteSpace(txtPrivateKey.Text));
+        }
+
+        private void txtPrivateKey_TextChanged(object sender, EventArgs e)
+        {
+            cboControllingDomain.Enabled = (!string.IsNullOrWhiteSpace(txtAPIKey.Text) && !string.IsNullOrWhiteSpace(txtPrivateKey.Text));
+        }
+
 
 
     }

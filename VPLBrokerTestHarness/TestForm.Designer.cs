@@ -52,8 +52,13 @@
             this.txtRegID = new System.Windows.Forms.TextBox();
             this.lblRegID = new System.Windows.Forms.Label();
             this.pnlReturn = new System.Windows.Forms.Panel();
+            this.tvResults = new EPocalipse.Json.Viewer.JsonViewer();
             this.pnlRetrieveActions = new System.Windows.Forms.Panel();
             this.pnlMakeDecision = new System.Windows.Forms.Panel();
+            this.txtReceiveVoterRegAppID = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtAltID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.chkBlockResubmission = new System.Windows.Forms.CheckBox();
             this.btnHold = new System.Windows.Forms.Button();
@@ -73,10 +78,12 @@
             this.btnScanAffidavits = new System.Windows.Forms.Button();
             this.lblScanInstructions = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pnlKeys = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtPrivateKey = new System.Windows.Forms.TextBox();
-            this.lblPrivateKey = new System.Windows.Forms.Label();
-            this.txtAPIKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtAPIKey = new System.Windows.Forms.TextBox();
+            this.lblPrivateKey = new System.Windows.Forms.Label();
             this.rdoProduction = new System.Windows.Forms.RadioButton();
             this.rdoTest = new System.Windows.Forms.RadioButton();
             this.rdoLocalHost = new System.Windows.Forms.RadioButton();
@@ -84,13 +91,6 @@
             this.lblControllingDomain = new System.Windows.Forms.Label();
             this.stausStrip = new System.Windows.Forms.StatusStrip();
             this.tsStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtAltID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtReceiveVoterRegAppID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tvResults = new EPocalipse.Json.Viewer.JsonViewer();
-            this.pnlKeys = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabActions.SuspendLayout();
             this.tabBasicBrokerCallsPage.SuspendLayout();
             this.pnlReadTransactions.SuspendLayout();
@@ -104,8 +104,8 @@
             this.tabQRCodeTestPage.SuspendLayout();
             this.pnlScanResults.SuspendLayout();
             this.pnlHeader.SuspendLayout();
-            this.stausStrip.SuspendLayout();
             this.pnlKeys.SuspendLayout();
+            this.stausStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabActions
@@ -228,7 +228,7 @@
             this.lblFrom.TabIndex = 14;
             this.lblFrom.Text = "page:";
             // 
-            // numFrom
+            // numPageNumber
             // 
             this.numPageNumber.Enabled = false;
             this.numPageNumber.Location = new System.Drawing.Point(164, 25);
@@ -242,7 +242,7 @@
             0,
             0,
             0});
-            this.numPageNumber.Name = "numFrom";
+            this.numPageNumber.Name = "numPageNumber";
             this.numPageNumber.Size = new System.Drawing.Size(65, 20);
             this.numPageNumber.TabIndex = 15;
             this.numPageNumber.Value = new decimal(new int[] {
@@ -251,7 +251,7 @@
             0,
             0});
             // 
-            // numMax
+            // numRecordsPerPage
             // 
             this.numRecordsPerPage.Enabled = false;
             this.numRecordsPerPage.Location = new System.Drawing.Point(312, 25);
@@ -260,7 +260,7 @@
             0,
             0,
             0});
-            this.numRecordsPerPage.Name = "numMax";
+            this.numRecordsPerPage.Name = "numRecordsPerPage";
             this.numRecordsPerPage.Size = new System.Drawing.Size(65, 20);
             this.numRecordsPerPage.TabIndex = 17;
             this.numRecordsPerPage.Value = new decimal(new int[] {
@@ -412,6 +412,16 @@
             this.pnlReturn.Size = new System.Drawing.Size(1470, 417);
             this.pnlReturn.TabIndex = 11;
             // 
+            // tvResults
+            // 
+            this.tvResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvResults.Json = "";
+            this.tvResults.Location = new System.Drawing.Point(0, 0);
+            this.tvResults.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.tvResults.Name = "tvResults";
+            this.tvResults.Size = new System.Drawing.Size(1470, 417);
+            this.tvResults.TabIndex = 4;
+            // 
             // pnlRetrieveActions
             // 
             this.pnlRetrieveActions.BackColor = System.Drawing.Color.LightGray;
@@ -446,6 +456,45 @@
             this.pnlMakeDecision.Name = "pnlMakeDecision";
             this.pnlMakeDecision.Size = new System.Drawing.Size(724, 106);
             this.pnlMakeDecision.TabIndex = 23;
+            // 
+            // txtReceiveVoterRegAppID
+            // 
+            this.txtReceiveVoterRegAppID.Location = new System.Drawing.Point(6, 44);
+            this.txtReceiveVoterRegAppID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtReceiveVoterRegAppID.Name = "txtReceiveVoterRegAppID";
+            this.txtReceiveVoterRegAppID.ReadOnly = true;
+            this.txtReceiveVoterRegAppID.Size = new System.Drawing.Size(105, 20);
+            this.txtReceiveVoterRegAppID.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 28);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 13);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Voter Reg App ID:";
+            // 
+            // txtAltID
+            // 
+            this.txtAltID.Enabled = false;
+            this.txtAltID.Location = new System.Drawing.Point(132, 43);
+            this.txtAltID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAltID.Name = "txtAltID";
+            this.txtAltID.Size = new System.Drawing.Size(122, 20);
+            this.txtAltID.TabIndex = 1;
+            this.txtAltID.TextChanged += new System.EventHandler(this.txtAltID_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(129, 28);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "VSN:";
             // 
             // label5
             // 
@@ -656,6 +705,31 @@
             this.pnlHeader.Size = new System.Drawing.Size(1478, 34);
             this.pnlHeader.TabIndex = 0;
             // 
+            // pnlKeys
+            // 
+            this.pnlKeys.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.pnlKeys.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlKeys.Controls.Add(this.label9);
+            this.pnlKeys.Controls.Add(this.txtPrivateKey);
+            this.pnlKeys.Controls.Add(this.label1);
+            this.pnlKeys.Controls.Add(this.txtAPIKey);
+            this.pnlKeys.Controls.Add(this.lblPrivateKey);
+            this.pnlKeys.Location = new System.Drawing.Point(222, -1);
+            this.pnlKeys.Name = "pnlKeys";
+            this.pnlKeys.Size = new System.Drawing.Size(778, 35);
+            this.pnlKeys.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(2, 2);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "ElectionHub Keys:";
+            // 
             // txtPrivateKey
             // 
             this.txtPrivateKey.Location = new System.Drawing.Point(528, 9);
@@ -664,25 +738,7 @@
             this.txtPrivateKey.Name = "txtPrivateKey";
             this.txtPrivateKey.Size = new System.Drawing.Size(212, 20);
             this.txtPrivateKey.TabIndex = 2;
-            // 
-            // lblPrivateKey
-            // 
-            this.lblPrivateKey.AutoSize = true;
-            this.lblPrivateKey.Location = new System.Drawing.Point(414, 12);
-            this.lblPrivateKey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrivateKey.Name = "lblPrivateKey";
-            this.lblPrivateKey.Size = new System.Drawing.Size(110, 13);
-            this.lblPrivateKey.TabIndex = 16;
-            this.lblPrivateKey.Text = "Account Private Key: ";
-            // 
-            // txtAPIKey
-            // 
-            this.txtAPIKey.Location = new System.Drawing.Point(185, 9);
-            this.txtAPIKey.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAPIKey.MaxLength = 36;
-            this.txtAPIKey.Name = "txtAPIKey";
-            this.txtAPIKey.Size = new System.Drawing.Size(212, 20);
-            this.txtAPIKey.TabIndex = 1;
+            this.txtPrivateKey.TextChanged += new System.EventHandler(this.txtPrivateKey_TextChanged);
             // 
             // label1
             // 
@@ -693,6 +749,26 @@
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Your API Key: ";
+            // 
+            // txtAPIKey
+            // 
+            this.txtAPIKey.Location = new System.Drawing.Point(185, 9);
+            this.txtAPIKey.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAPIKey.MaxLength = 36;
+            this.txtAPIKey.Name = "txtAPIKey";
+            this.txtAPIKey.Size = new System.Drawing.Size(212, 20);
+            this.txtAPIKey.TabIndex = 1;
+            this.txtAPIKey.TextChanged += new System.EventHandler(this.txtAPIKey_TextChanged);
+            // 
+            // lblPrivateKey
+            // 
+            this.lblPrivateKey.AutoSize = true;
+            this.lblPrivateKey.Location = new System.Drawing.Point(414, 12);
+            this.lblPrivateKey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrivateKey.Name = "lblPrivateKey";
+            this.lblPrivateKey.Size = new System.Drawing.Size(110, 13);
+            this.lblPrivateKey.TabIndex = 16;
+            this.lblPrivateKey.Text = "Account Private Key: ";
             // 
             // rdoProduction
             // 
@@ -734,6 +810,7 @@
             this.cboControllingDomain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboControllingDomain.DisplayMember = "Name";
+            this.cboControllingDomain.Enabled = false;
             this.cboControllingDomain.FormattingEnabled = true;
             this.cboControllingDomain.Location = new System.Drawing.Point(1119, 8);
             this.cboControllingDomain.Margin = new System.Windows.Forms.Padding(2);
@@ -768,80 +845,6 @@
             this.tsStatusLabel.Name = "tsStatusLabel";
             this.tsStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
-            // txtAltID
-            // 
-            this.txtAltID.Enabled = false;
-            this.txtAltID.Location = new System.Drawing.Point(132, 43);
-            this.txtAltID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAltID.Name = "txtAltID";
-            this.txtAltID.Size = new System.Drawing.Size(122, 20);
-            this.txtAltID.TabIndex = 1;
-            this.txtAltID.TextChanged += new System.EventHandler(this.txtAltID_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(129, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "VSN:";
-            // 
-            // txtReceiveVoterRegAppID
-            // 
-            this.txtReceiveVoterRegAppID.Location = new System.Drawing.Point(6, 44);
-            this.txtReceiveVoterRegAppID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtReceiveVoterRegAppID.Name = "txtReceiveVoterRegAppID";
-            this.txtReceiveVoterRegAppID.ReadOnly = true;
-            this.txtReceiveVoterRegAppID.Size = new System.Drawing.Size(105, 20);
-            this.txtReceiveVoterRegAppID.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 28);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 13);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Voter Reg App ID:";
-            // 
-            // tvResults
-            // 
-            this.tvResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvResults.Json = "";
-            this.tvResults.Location = new System.Drawing.Point(0, 0);
-            this.tvResults.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
-            this.tvResults.Name = "tvResults";
-            this.tvResults.Size = new System.Drawing.Size(1470, 417);
-            this.tvResults.TabIndex = 4;
-            // 
-            // pnlKeys
-            // 
-            this.pnlKeys.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.pnlKeys.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlKeys.Controls.Add(this.label9);
-            this.pnlKeys.Controls.Add(this.txtPrivateKey);
-            this.pnlKeys.Controls.Add(this.label1);
-            this.pnlKeys.Controls.Add(this.txtAPIKey);
-            this.pnlKeys.Controls.Add(this.lblPrivateKey);
-            this.pnlKeys.Location = new System.Drawing.Point(222, -1);
-            this.pnlKeys.Name = "pnlKeys";
-            this.pnlKeys.Size = new System.Drawing.Size(778, 35);
-            this.pnlKeys.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(2, 2);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "ElectionHub Keys:";
-            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -873,10 +876,10 @@
             this.pnlScanResults.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.stausStrip.ResumeLayout(false);
-            this.stausStrip.PerformLayout();
             this.pnlKeys.ResumeLayout(false);
             this.pnlKeys.PerformLayout();
+            this.stausStrip.ResumeLayout(false);
+            this.stausStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
