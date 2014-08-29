@@ -1,0 +1,35 @@
+C:\JSON Viewer\JsonViewer\bin\Debug\JsonViewer.dll
+C:\JSON Viewer\JsonViewer\bin\Debug\JsonViewer.pdb
+C:\JSON Viewer\JsonViewer\bin\Debug\Newtonsoft.Json.dll
+C:\JSON Viewer\JsonViewer\obj\Debug\JsonViewer.csprojResolveAssemblyReference.cache
+C:\JSON Viewer\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.GridVisualizer.resources
+C:\JSON Viewer\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.JsonViewer.resources
+C:\JSON Viewer\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.JsonObjectVisualizer.resources
+C:\JSON Viewer\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.Properties.Resources.resources
+C:\JSON Viewer\JsonViewer\obj\Debug\JsonViewer.csproj.GenerateResource.Cache
+C:\JSON Viewer\JsonViewer\obj\Debug\JsonViewer.dll
+C:\JSON Viewer\JsonViewer\obj\Debug\JsonViewer.pdb
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\bin\Debug\JsonViewer.dll
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\bin\Debug\JsonViewer.pdb
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.GridVisualizer.resources
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.JsonViewer.resources
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.JsonObjectVisualizer.resources
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.Properties.Resources.resources
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.csproj.GenerateResource.Cache
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.dll
+C:\Users\Tim\Source\Repos\voterplace\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.pdb
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\bin\Debug\JsonViewer.dll
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\bin\Debug\JsonViewer.pdb
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.GridVisualizer.resources
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.JsonViewer.resources
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.JsonObjectVisualizer.resources
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\EPocalipse.Json.Viewer.Properties.Resources.resources
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.csproj.GenerateResource.Cache
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.dll
+C:\Users\Tim\Source\Repos\VPLBrokerTestHarness\JsonViewer\obj\Debug\JsonViewer.pdb
