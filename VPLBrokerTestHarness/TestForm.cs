@@ -637,6 +637,24 @@ namespace VPLBrokerTestHarness
             cboControllingDomain.Enabled = (!string.IsNullOrWhiteSpace(txtAPIKey.Text) && !string.IsNullOrWhiteSpace(txtPrivateKey.Text));
         }
 
+        private void lnkHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            // Specify that the link was visited. 
+            this.lnkHub.LinkVisited = true;
+
+            string url = "https://electionhub.com";
+
+            if (rdoLocalHost.Checked)
+                url = "http://localhost/electionhub";
+            else if (rdoTest.Checked)
+                url = "http://ehubtest.com";
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start(url);
+
+        }
+
 
 
     }

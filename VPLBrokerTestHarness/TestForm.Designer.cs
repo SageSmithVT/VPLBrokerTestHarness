@@ -79,7 +79,6 @@
             this.lblScanInstructions = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlKeys = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtPrivateKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAPIKey = new System.Windows.Forms.TextBox();
@@ -91,6 +90,7 @@
             this.lblControllingDomain = new System.Windows.Forms.Label();
             this.stausStrip = new System.Windows.Forms.StatusStrip();
             this.tsStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lnkHub = new System.Windows.Forms.LinkLabel();
             this.tabActions.SuspendLayout();
             this.tabBasicBrokerCallsPage.SuspendLayout();
             this.pnlReadTransactions.SuspendLayout();
@@ -709,7 +709,7 @@
             // 
             this.pnlKeys.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.pnlKeys.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlKeys.Controls.Add(this.label9);
+            this.pnlKeys.Controls.Add(this.lnkHub);
             this.pnlKeys.Controls.Add(this.txtPrivateKey);
             this.pnlKeys.Controls.Add(this.label1);
             this.pnlKeys.Controls.Add(this.txtAPIKey);
@@ -719,20 +719,9 @@
             this.pnlKeys.Size = new System.Drawing.Size(778, 35);
             this.pnlKeys.TabIndex = 18;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(2, 2);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "ElectionHub Keys:";
-            // 
             // txtPrivateKey
             // 
-            this.txtPrivateKey.Location = new System.Drawing.Point(528, 9);
+            this.txtPrivateKey.Location = new System.Drawing.Point(556, 9);
             this.txtPrivateKey.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrivateKey.MaxLength = 36;
             this.txtPrivateKey.Name = "txtPrivateKey";
@@ -743,7 +732,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 12);
+            this.label1.Location = new System.Drawing.Point(133, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
@@ -752,7 +741,7 @@
             // 
             // txtAPIKey
             // 
-            this.txtAPIKey.Location = new System.Drawing.Point(185, 9);
+            this.txtAPIKey.Location = new System.Drawing.Point(213, 9);
             this.txtAPIKey.Margin = new System.Windows.Forms.Padding(2);
             this.txtAPIKey.MaxLength = 36;
             this.txtAPIKey.Name = "txtAPIKey";
@@ -763,7 +752,7 @@
             // lblPrivateKey
             // 
             this.lblPrivateKey.AutoSize = true;
-            this.lblPrivateKey.Location = new System.Drawing.Point(414, 12);
+            this.lblPrivateKey.Location = new System.Drawing.Point(442, 12);
             this.lblPrivateKey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrivateKey.Name = "lblPrivateKey";
             this.lblPrivateKey.Size = new System.Drawing.Size(110, 13);
@@ -784,24 +773,24 @@
             // rdoTest
             // 
             this.rdoTest.AutoSize = true;
+            this.rdoTest.Checked = true;
             this.rdoTest.Location = new System.Drawing.Point(85, 10);
             this.rdoTest.Margin = new System.Windows.Forms.Padding(2);
             this.rdoTest.Name = "rdoTest";
             this.rdoTest.Size = new System.Drawing.Size(46, 17);
             this.rdoTest.TabIndex = 12;
+            this.rdoTest.TabStop = true;
             this.rdoTest.Text = "Test";
             this.rdoTest.UseVisualStyleBackColor = true;
             // 
             // rdoLocalHost
             // 
             this.rdoLocalHost.AutoSize = true;
-            this.rdoLocalHost.Checked = true;
             this.rdoLocalHost.Location = new System.Drawing.Point(8, 10);
             this.rdoLocalHost.Margin = new System.Windows.Forms.Padding(2);
             this.rdoLocalHost.Name = "rdoLocalHost";
             this.rdoLocalHost.Size = new System.Drawing.Size(73, 17);
             this.rdoLocalHost.TabIndex = 11;
-            this.rdoLocalHost.TabStop = true;
             this.rdoLocalHost.Text = "LocalHost";
             this.rdoLocalHost.UseVisualStyleBackColor = true;
             // 
@@ -844,6 +833,18 @@
             // 
             this.tsStatusLabel.Name = "tsStatusLabel";
             this.tsStatusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
+            // lnkHub
+            // 
+            this.lnkHub.AutoSize = true;
+            this.lnkHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkHub.Location = new System.Drawing.Point(3, 10);
+            this.lnkHub.Name = "lnkHub";
+            this.lnkHub.Size = new System.Drawing.Size(120, 16);
+            this.lnkHub.TabIndex = 19;
+            this.lnkHub.TabStop = true;
+            this.lnkHub.Text = "Election Hub Keys:";
+            this.lnkHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHub_LinkClicked);
             // 
             // TestForm
             // 
@@ -949,7 +950,7 @@
         private System.Windows.Forms.TextBox txtReceiveVoterRegAppID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnlKeys;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.LinkLabel lnkHub;
 
     }
 }
