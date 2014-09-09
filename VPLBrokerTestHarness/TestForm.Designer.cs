@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.tabActions = new System.Windows.Forms.TabControl();
             this.tabBasicBrokerCallsPage = new System.Windows.Forms.TabPage();
+            this.pnlReturn = new System.Windows.Forms.Panel();
+            this.tvResults = new EPocalipse.Json.Viewer.JsonViewer();
+            this.pnlRetrieveActions = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pnlReadTransactions = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.cboFindHoldReason = new System.Windows.Forms.ComboBox();
@@ -51,9 +55,6 @@
             this.pnlRegKey = new System.Windows.Forms.Panel();
             this.txtRegID = new System.Windows.Forms.TextBox();
             this.lblRegID = new System.Windows.Forms.Label();
-            this.pnlReturn = new System.Windows.Forms.Panel();
-            this.tvResults = new EPocalipse.Json.Viewer.JsonViewer();
-            this.pnlRetrieveActions = new System.Windows.Forms.Panel();
             this.pnlMakeDecision = new System.Windows.Forms.Panel();
             this.txtReceiveVoterRegAppID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -79,6 +80,7 @@
             this.lblScanInstructions = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlKeys = new System.Windows.Forms.Panel();
+            this.lnkHub = new System.Windows.Forms.LinkLabel();
             this.txtPrivateKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAPIKey = new System.Windows.Forms.TextBox();
@@ -90,16 +92,19 @@
             this.lblControllingDomain = new System.Windows.Forms.Label();
             this.stausStrip = new System.Windows.Forms.StatusStrip();
             this.tsStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lnkHub = new System.Windows.Forms.LinkLabel();
             this.tabActions.SuspendLayout();
             this.tabBasicBrokerCallsPage.SuspendLayout();
+            this.pnlReturn.SuspendLayout();
+            this.pnlRetrieveActions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.pnlReadTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPageNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRecordsPerPage)).BeginInit();
             this.pnlQueueTypes.SuspendLayout();
             this.pnlRegKey.SuspendLayout();
-            this.pnlReturn.SuspendLayout();
-            this.pnlRetrieveActions.SuspendLayout();
             this.pnlMakeDecision.SuspendLayout();
             this.tabQRCodeTestPage.SuspendLayout();
             this.pnlScanResults.SuspendLayout();
@@ -124,7 +129,6 @@
             // 
             // tabBasicBrokerCallsPage
             // 
-            this.tabBasicBrokerCallsPage.Controls.Add(this.pnlReadTransactions);
             this.tabBasicBrokerCallsPage.Controls.Add(this.pnlReturn);
             this.tabBasicBrokerCallsPage.Controls.Add(this.pnlRetrieveActions);
             this.tabBasicBrokerCallsPage.Location = new System.Drawing.Point(4, 4);
@@ -135,6 +139,54 @@
             this.tabBasicBrokerCallsPage.TabIndex = 0;
             this.tabBasicBrokerCallsPage.Text = "Basic Broker Call Tests";
             this.tabBasicBrokerCallsPage.UseVisualStyleBackColor = true;
+            // 
+            // pnlReturn
+            // 
+            this.pnlReturn.Controls.Add(this.tvResults);
+            this.pnlReturn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlReturn.Location = new System.Drawing.Point(2, 146);
+            this.pnlReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlReturn.Name = "pnlReturn";
+            this.pnlReturn.Size = new System.Drawing.Size(1470, 417);
+            this.pnlReturn.TabIndex = 11;
+            // 
+            // tvResults
+            // 
+            this.tvResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvResults.Json = "";
+            this.tvResults.Location = new System.Drawing.Point(0, 0);
+            this.tvResults.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.tvResults.Name = "tvResults";
+            this.tvResults.Size = new System.Drawing.Size(1470, 417);
+            this.tvResults.TabIndex = 4;
+            // 
+            // pnlRetrieveActions
+            // 
+            this.pnlRetrieveActions.BackColor = System.Drawing.Color.LightGray;
+            this.pnlRetrieveActions.Controls.Add(this.splitContainer1);
+            this.pnlRetrieveActions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRetrieveActions.Location = new System.Drawing.Point(2, 30);
+            this.pnlRetrieveActions.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlRetrieveActions.Name = "pnlRetrieveActions";
+            this.pnlRetrieveActions.Size = new System.Drawing.Size(1470, 116);
+            this.pnlRetrieveActions.TabIndex = 10;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.pnlReadTransactions);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.pnlMakeDecision);
+            this.splitContainer1.Size = new System.Drawing.Size(1470, 116);
+            this.splitContainer1.SplitterDistance = 735;
+            this.splitContainer1.TabIndex = 24;
             // 
             // pnlReadTransactions
             // 
@@ -153,14 +205,17 @@
             this.pnlReadTransactions.Controls.Add(this.lblMax);
             this.pnlReadTransactions.Controls.Add(this.rdoGetReg);
             this.pnlReadTransactions.Controls.Add(this.pnlRegKey);
+            this.pnlReadTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlReadTransactions.Enabled = false;
-            this.pnlReadTransactions.Location = new System.Drawing.Point(6, 32);
+            this.pnlReadTransactions.Location = new System.Drawing.Point(0, 0);
             this.pnlReadTransactions.Name = "pnlReadTransactions";
-            this.pnlReadTransactions.Size = new System.Drawing.Size(730, 108);
-            this.pnlReadTransactions.TabIndex = 24;
+            this.pnlReadTransactions.Size = new System.Drawing.Size(735, 116);
+            this.pnlReadTransactions.TabIndex = 25;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +236,6 @@
             this.cboFindHoldReason.Size = new System.Drawing.Size(274, 21);
             this.cboFindHoldReason.TabIndex = 29;
             this.cboFindHoldReason.ValueMember = "holdReasonId";
-            this.cboFindHoldReason.DropDown += new System.EventHandler(this.cboFindHoldReason_DropDown);
             // 
             // label4
             // 
@@ -196,7 +250,7 @@
             // 
             this.btnContactBroker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnContactBroker.Enabled = false;
-            this.btnContactBroker.Location = new System.Drawing.Point(622, 72);
+            this.btnContactBroker.Location = new System.Drawing.Point(622, 80);
             this.btnContactBroker.Margin = new System.Windows.Forms.Padding(2);
             this.btnContactBroker.Name = "btnContactBroker";
             this.btnContactBroker.Size = new System.Drawing.Size(98, 29);
@@ -402,40 +456,8 @@
             this.lblRegID.TabIndex = 0;
             this.lblRegID.Text = "Voter Reg App ID:";
             // 
-            // pnlReturn
-            // 
-            this.pnlReturn.Controls.Add(this.tvResults);
-            this.pnlReturn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlReturn.Location = new System.Drawing.Point(2, 146);
-            this.pnlReturn.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlReturn.Name = "pnlReturn";
-            this.pnlReturn.Size = new System.Drawing.Size(1470, 417);
-            this.pnlReturn.TabIndex = 11;
-            // 
-            // tvResults
-            // 
-            this.tvResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvResults.Json = "";
-            this.tvResults.Location = new System.Drawing.Point(0, 0);
-            this.tvResults.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
-            this.tvResults.Name = "tvResults";
-            this.tvResults.Size = new System.Drawing.Size(1470, 417);
-            this.tvResults.TabIndex = 4;
-            // 
-            // pnlRetrieveActions
-            // 
-            this.pnlRetrieveActions.BackColor = System.Drawing.Color.LightGray;
-            this.pnlRetrieveActions.Controls.Add(this.pnlMakeDecision);
-            this.pnlRetrieveActions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRetrieveActions.Location = new System.Drawing.Point(2, 30);
-            this.pnlRetrieveActions.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlRetrieveActions.Name = "pnlRetrieveActions";
-            this.pnlRetrieveActions.Size = new System.Drawing.Size(1470, 116);
-            this.pnlRetrieveActions.TabIndex = 10;
-            // 
             // pnlMakeDecision
             // 
-            this.pnlMakeDecision.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMakeDecision.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlMakeDecision.Controls.Add(this.txtReceiveVoterRegAppID);
             this.pnlMakeDecision.Controls.Add(this.label8);
@@ -451,11 +473,12 @@
             this.pnlMakeDecision.Controls.Add(this.label2);
             this.pnlMakeDecision.Controls.Add(this.btnAccept);
             this.pnlMakeDecision.Controls.Add(this.btnReject);
+            this.pnlMakeDecision.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMakeDecision.Enabled = false;
-            this.pnlMakeDecision.Location = new System.Drawing.Point(740, 2);
+            this.pnlMakeDecision.Location = new System.Drawing.Point(0, 0);
             this.pnlMakeDecision.Name = "pnlMakeDecision";
-            this.pnlMakeDecision.Size = new System.Drawing.Size(724, 106);
-            this.pnlMakeDecision.TabIndex = 23;
+            this.pnlMakeDecision.Size = new System.Drawing.Size(731, 116);
+            this.pnlMakeDecision.TabIndex = 24;
             // 
             // txtReceiveVoterRegAppID
             // 
@@ -484,7 +507,6 @@
             this.txtAltID.Name = "txtAltID";
             this.txtAltID.Size = new System.Drawing.Size(122, 20);
             this.txtAltID.TabIndex = 1;
-            this.txtAltID.TextChanged += new System.EventHandler(this.txtAltID_TextChanged);
             // 
             // label7
             // 
@@ -498,6 +520,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -523,7 +547,7 @@
             // 
             this.btnHold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHold.Enabled = false;
-            this.btnHold.Location = new System.Drawing.Point(621, 72);
+            this.btnHold.Location = new System.Drawing.Point(621, 82);
             this.btnHold.Margin = new System.Windows.Forms.Padding(2);
             this.btnHold.Name = "btnHold";
             this.btnHold.Size = new System.Drawing.Size(92, 29);
@@ -542,7 +566,6 @@
             this.cboHoldReason.Size = new System.Drawing.Size(214, 21);
             this.cboHoldReason.TabIndex = 27;
             this.cboHoldReason.ValueMember = "holdReasonId";
-            this.cboHoldReason.DropDown += new System.EventHandler(this.cboHoldReason_DropDown);
             this.cboHoldReason.SelectedIndexChanged += new System.EventHandler(this.cboHoldReason_SelectedIndexChanged);
             // 
             // cboRejectReason
@@ -554,7 +577,6 @@
             this.cboRejectReason.Size = new System.Drawing.Size(214, 21);
             this.cboRejectReason.TabIndex = 26;
             this.cboRejectReason.ValueMember = "rejectReasonId";
-            this.cboRejectReason.DropDown += new System.EventHandler(this.cboRejectReason_DropDown);
             this.cboRejectReason.SelectedIndexChanged += new System.EventHandler(this.cboRejectReason_SelectedIndexChanged);
             // 
             // label3
@@ -570,7 +592,7 @@
             // 
             this.btnReceive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReceive.Enabled = false;
-            this.btnReceive.Location = new System.Drawing.Point(37, 71);
+            this.btnReceive.Location = new System.Drawing.Point(37, 81);
             this.btnReceive.Margin = new System.Windows.Forms.Padding(2);
             this.btnReceive.Name = "btnReceive";
             this.btnReceive.Size = new System.Drawing.Size(74, 29);
@@ -592,7 +614,7 @@
             // 
             this.btnAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAccept.Enabled = false;
-            this.btnAccept.Location = new System.Drawing.Point(180, 72);
+            this.btnAccept.Location = new System.Drawing.Point(180, 82);
             this.btnAccept.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(74, 29);
@@ -605,7 +627,7 @@
             // 
             this.btnReject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReject.Enabled = false;
-            this.btnReject.Location = new System.Drawing.Point(412, 72);
+            this.btnReject.Location = new System.Drawing.Point(412, 82);
             this.btnReject.Margin = new System.Windows.Forms.Padding(2);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(74, 29);
@@ -718,6 +740,18 @@
             this.pnlKeys.Name = "pnlKeys";
             this.pnlKeys.Size = new System.Drawing.Size(778, 35);
             this.pnlKeys.TabIndex = 18;
+            // 
+            // lnkHub
+            // 
+            this.lnkHub.AutoSize = true;
+            this.lnkHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkHub.Location = new System.Drawing.Point(3, 10);
+            this.lnkHub.Name = "lnkHub";
+            this.lnkHub.Size = new System.Drawing.Size(120, 16);
+            this.lnkHub.TabIndex = 19;
+            this.lnkHub.TabStop = true;
+            this.lnkHub.Text = "Election Hub Keys:";
+            this.lnkHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHub_LinkClicked);
             // 
             // txtPrivateKey
             // 
@@ -834,18 +868,6 @@
             this.tsStatusLabel.Name = "tsStatusLabel";
             this.tsStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
-            // lnkHub
-            // 
-            this.lnkHub.AutoSize = true;
-            this.lnkHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkHub.Location = new System.Drawing.Point(3, 10);
-            this.lnkHub.Name = "lnkHub";
-            this.lnkHub.Size = new System.Drawing.Size(120, 16);
-            this.lnkHub.TabIndex = 19;
-            this.lnkHub.TabStop = true;
-            this.lnkHub.Text = "Election Hub Keys:";
-            this.lnkHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHub_LinkClicked);
-            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -861,6 +883,12 @@
             this.Text = "VPL Broker Test Harness";
             this.tabActions.ResumeLayout(false);
             this.tabBasicBrokerCallsPage.ResumeLayout(false);
+            this.pnlReturn.ResumeLayout(false);
+            this.pnlRetrieveActions.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.pnlReadTransactions.ResumeLayout(false);
             this.pnlReadTransactions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPageNumber)).EndInit();
@@ -869,8 +897,6 @@
             this.pnlQueueTypes.PerformLayout();
             this.pnlRegKey.ResumeLayout(false);
             this.pnlRegKey.PerformLayout();
-            this.pnlReturn.ResumeLayout(false);
-            this.pnlRetrieveActions.ResumeLayout(false);
             this.pnlMakeDecision.ResumeLayout(false);
             this.pnlMakeDecision.PerformLayout();
             this.tabQRCodeTestPage.ResumeLayout(false);
@@ -892,14 +918,10 @@
         private System.Windows.Forms.TabControl tabActions;
         private System.Windows.Forms.TabPage tabBasicBrokerCallsPage;
         private System.Windows.Forms.TabPage tabQRCodeTestPage;
-        private System.Windows.Forms.Button btnContactBroker;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.ComboBox cboControllingDomain;
         private System.Windows.Forms.Label lblControllingDomain;
         private System.Windows.Forms.Panel pnlRetrieveActions;
-        private System.Windows.Forms.RadioButton rdoGetStats;
-        private System.Windows.Forms.RadioButton rdoGetReg;
-        private System.Windows.Forms.RadioButton rdoGetQueue;
         private System.Windows.Forms.Panel pnlReturn;
         private System.Windows.Forms.RadioButton rdoProduction;
         private System.Windows.Forms.RadioButton rdoTest;
@@ -908,25 +930,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPrivateKey;
         private System.Windows.Forms.Label lblPrivateKey;
-        private System.Windows.Forms.Panel pnlQueueTypes;
-        private System.Windows.Forms.RadioButton rdoRejected;
-        private System.Windows.Forms.RadioButton rdoCompleted;
-        private System.Windows.Forms.RadioButton rdoReceived;
-        private System.Windows.Forms.Panel pnlRegKey;
-        private System.Windows.Forms.Label lblRegID;
-        private System.Windows.Forms.TextBox txtRegID;
         private EPocalipse.Json.Viewer.JsonViewer tvResults;
-        private System.Windows.Forms.RadioButton rdoAccepted;
-        private System.Windows.Forms.NumericUpDown numRecordsPerPage;
-        private System.Windows.Forms.Label lblMax;
-        private System.Windows.Forms.NumericUpDown numPageNumber;
-        private System.Windows.Forms.Label lblFrom;
-        private System.Windows.Forms.Button btnReject;
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Button btnReceive;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnlMakeDecision;
-        private System.Windows.Forms.Panel pnlReadTransactions;
         private System.Windows.Forms.Panel pnlScanResults;
         private System.Windows.Forms.ListView lvScanResults;
         private System.Windows.Forms.Button btnScanAffidavits;
@@ -934,23 +938,46 @@
         private System.Windows.Forms.ColumnHeader colVoterRegistrationApplicationID;
         private System.Windows.Forms.ColumnHeader colResults;
         private System.Windows.Forms.ColumnHeader colDateTime;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboHoldReason;
-        private System.Windows.Forms.ComboBox cboRejectReason;
-        private System.Windows.Forms.Button btnHold;
         private System.Windows.Forms.StatusStrip stausStrip;
-        private System.Windows.Forms.CheckBox chkBlockResubmission;
         private System.Windows.Forms.ToolStripStatusLabel tsStatusLabel;
-        private System.Windows.Forms.ComboBox cboFindHoldReason;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtAltID;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtReceiveVoterRegAppID;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnlKeys;
         private System.Windows.Forms.LinkLabel lnkHub;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel pnlReadTransactions;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboFindHoldReason;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnContactBroker;
+        private System.Windows.Forms.RadioButton rdoGetQueue;
+        private System.Windows.Forms.Label lblFrom;
+        private System.Windows.Forms.NumericUpDown numPageNumber;
+        private System.Windows.Forms.NumericUpDown numRecordsPerPage;
+        private System.Windows.Forms.RadioButton rdoGetStats;
+        private System.Windows.Forms.Panel pnlQueueTypes;
+        private System.Windows.Forms.RadioButton rdoAccepted;
+        private System.Windows.Forms.RadioButton rdoRejected;
+        private System.Windows.Forms.RadioButton rdoCompleted;
+        private System.Windows.Forms.RadioButton rdoReceived;
+        private System.Windows.Forms.Label lblMax;
+        private System.Windows.Forms.RadioButton rdoGetReg;
+        private System.Windows.Forms.Panel pnlRegKey;
+        private System.Windows.Forms.TextBox txtRegID;
+        private System.Windows.Forms.Label lblRegID;
+        private System.Windows.Forms.Panel pnlMakeDecision;
+        private System.Windows.Forms.TextBox txtReceiveVoterRegAppID;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtAltID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkBlockResubmission;
+        private System.Windows.Forms.Button btnHold;
+        private System.Windows.Forms.ComboBox cboHoldReason;
+        private System.Windows.Forms.ComboBox cboRejectReason;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnReceive;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Button btnReject;
 
     }
 }

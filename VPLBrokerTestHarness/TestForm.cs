@@ -293,6 +293,7 @@ namespace VPLBrokerTestHarness
             {
                 setEnableStates();
                 txtRegID.Text = selectedApp.voterRegistrationApplicationId.ToString();
+                txtReceiveVoterRegAppID.Text = txtRegID.Text;
 
                 cboHoldReason.SelectedIndex = -1;
                 cboRejectReason.SelectedIndex = -1;
@@ -654,7 +655,6 @@ namespace VPLBrokerTestHarness
             System.Diagnostics.Process.Start(url);
 
         }
-
 
 
     }
